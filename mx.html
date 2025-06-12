@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show Surprise Content</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #content {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    img {
+      width: 200px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      margin: 20px auto;
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎁 Surprise Content Revealer</h1>
+  <p>Click the button below to discover something fun!</p>
+  <button onclick="toggleVisibility()">Reveal the Magic ✨</button>
+
+  <div id="content">
+    <h2>🎉 Welcome to the Fun Zone!</h2>
+    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Exciting GIF">
+    <p>🌍 Did you know? Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly good to eat!</p>
+    <blockquote>“Logic will get you from A to B. Imagination will take you everywhere.” – Albert Einstein</blockquote>
+    <p>Enjoy your day! ☀️</p>
+  </div>
+
+  <script>
+    function toggleVisibility() {
+      const content = document.getElementById("content");
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
